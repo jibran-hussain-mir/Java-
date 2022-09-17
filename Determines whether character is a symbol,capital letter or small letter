@@ -1,0 +1,22 @@
+import java.util.*;
+
+
+class Convert{
+    char character;
+    public void Determine(){
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter the Symbol");
+        character=s.next().charAt(0);
+        if(character >= 65 && character <= 90) System.out.println("It is a Capital Letter");
+        else if(character >= 97 && character <= 122) System.out.println("It is a Small Letter");
+        else if(character >= 48 && character <= 57) System.out.println("It is a digit (0-9)");
+        else if((character >= 0 && character <= 47) || (character >= 58 && character <= 64) || (character >= 91 && character <= 96) || (character >= 123 && character <= 127)) System.out.println("It is a Special Symbol");
+    }
+}
+
+public class Main{
+    public static void main(String[] args) {
+        Convert o=new Convert();
+        o.Determine();
+    }
+}
