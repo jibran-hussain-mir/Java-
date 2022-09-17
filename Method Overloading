@@ -1,0 +1,22 @@
+import java.util.*;
+
+class Overloading{
+    public int sum(int a,int b){
+        return a+b;
+    }
+    public int sum(int a,int b,int c) {
+        return a + b + c;
+    }
+    public double sum(double a,double b){
+        return a+b;
+    }
+}
+
+public class Main{
+    public static void main(String[] args) {
+        Overloading a=new Overloading();
+        System.out.println(a.sum(1.5,2.5));
+
+
+    }
+}
