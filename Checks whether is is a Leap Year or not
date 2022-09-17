@@ -1,0 +1,25 @@
+import java.util.*;
+
+class leapYear{
+    int leap_year;
+    public void getLeapYear(){
+        System.out.println("Enter the Year");
+        Scanner s=new Scanner(System.in);
+        leap_year=s.nextInt();
+    }
+
+    public boolean check_leapYear(){
+        if((leap_year % 4 ==0 || leap_year % 400 == 0) && (leap_year % 100 != 0))
+        {
+            System.out.println("This year is a Leap Year")
+        }
+    }
+}
+
+public Leapyear{
+    public static void main(String[] args){
+        leapYear obj=new leapYear();
+        obj.getLeapYear();
+        obj.check_leapYear();
+    }
+}
