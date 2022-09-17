@@ -1,0 +1,31 @@
+import java.util.*;
+
+class Lib_fine{
+    int days;
+    double fine;
+    public Lib_fine(int days){
+        this.days=days;
+    }
+    public void calcFine(){
+        if(days >=1 && days<=5){
+            fine=0.5*days;
+            System.out.println("Fine is Rs."+fine);
+        }
+        else if(days>5 && days<=10){
+            fine=(0.5*5) + (1*(days-5));
+            System.out.println("Fine is Rs."+fine);
+        }
+        else if(days>10 && days<=30){
+            fine=(0.5*5) + (1*5) + (5*(days-10));
+            System.out.println("Fine is Rs."+fine);
+        }
+        else System.out.println("Your Library Membership has been cancelled");
+    }
+}
+
+public class Main{
+    public static void main(String[] args) {
+        Lib_fine f=new Lib_fine(30);
+        f.calcFine();
+    }
+}
