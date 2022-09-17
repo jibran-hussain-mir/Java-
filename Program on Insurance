@@ -1,0 +1,32 @@
+import java.util.*;
+
+class Insurance{
+    int age;
+    String health,location,gender;
+
+    public Insurance(int age,String health,String location,String gender){
+        this.age=age;
+        this.health=health;
+        this.location=location;
+        this.gender=gender;
+    }
+
+    public void policy(){
+        if((health == "excellent") && (age>=25 && age<=35) && (location == "city") && (gender=="M")){
+            System.out.println("Premium is Rs. 4 per thousand and his policy amount cannot exceed Rs. 2 lakhs.");
+        }
+        else if((health == "excellent") && (age>=25 && age<=35) && (location == "city") && (gender=="F")){
+            System.out.println("Premium is Rs. 3 per thousand and his policy amount cannot exceed Rs. 1 lakhs.");
+        }
+        else {
+            System.out.println("You are not insured");
+        }
+    }
+}
+
+public class Main{
+    public static void main(String[] args) {
+        Insurance r=new Insurance(27,"excellent","city","F");
+        r.policy();
+    }
+}
